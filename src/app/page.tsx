@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
 import { Objectives } from '@/components/Objectives';
+import { Gallery } from '@/components/Gallery';
 import { Members } from '@/components/Members';
 import { Transparency } from '@/components/Transparency';
 import { DonationSection } from '@/components/DonationSection';
@@ -39,16 +40,19 @@ export default function Home() {
         {/* 3. Objectives Section (उद्देश्य एवं सेवाएं - 7 Pillars) */}
         <Objectives />
 
-        {/* 4. Members Section (पदाधिकारी एवं सदस्यगण) */}
+        {/* 4. Activities & Photo Gallery Section (सेवा गतिविधियां एवं चित्र वीथिका) */}
+        <Gallery />
+
+        {/* 5. Members Section (पदाधिकारी एवं सदस्यगण) */}
         <Members />
 
-        {/* 5. Transparency & Governance Section (पारदर्शिता एवं सुशासन) */}
+        {/* 6. Transparency & Governance Section (पारदर्शिता एवं सुशासन) */}
         <Transparency />
 
-        {/* 6. On-Page Donation Section (दान करें) */}
+        {/* 7. On-Page Donation Section (दान करें) */}
         <DonationSection />
 
-        {/* 7. Contact & Location Section (संपर्क एवं स्थान) */}
+        {/* 8. Contact & Location Section (संपर्क एवं स्थान) */}
         <Contact />
       </main>
 

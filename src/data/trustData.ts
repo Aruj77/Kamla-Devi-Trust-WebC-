@@ -65,7 +65,7 @@ export const TRUST_DATA = {
     helpline: '+91 98970 00000',
     displayPhoneHindi: '+91 94588 59203 (ट्रस्ट कार्यालय)',
     displayPhoneEnglish: '+91 94588 59203 (Trust Office)',
-    email: 'contact@kamladevitrust.org',
+    email: 'kamladevitrust@gmail.com',
     officeHoursHindi: 'प्रातः 09:00 बजे से सायं 06:00 बजे तक (सोमवार - शनिवार)',
     officeHoursEnglish: '09:00 AM to 06:00 PM (Monday - Saturday)',
     visitingDaysHindi: 'सप्ताह के सभी सात दिन',

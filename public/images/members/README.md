@@ -4,43 +4,54 @@
 
 ## आवश्यक फ़ाइल नाम (Exact File Names):
 
+### 1. आजीवन अध्यक्ष (Lifetime President)
 1. **श्री धीरज सिंह चौहान** (आजीवन अध्यक्ष / मुख्य ट्रस्टी):
    - फ़ाइल का नाम: `dheeraj-singh.jpg`
    - पाथ: `/public/images/members/dheeraj-singh.jpg`
 
-2. **टिंकू वर्मा** (सदस्य):
-   - फ़ाइल का नाम: `tinku-verma.jpg`
-   - पाथ: `/public/images/members/tinku-verma.jpg`
+### 2. प्रमुख कार्यकारी पदाधिकारी (Executive Office Bearers)
+2. **सतवीर** (उपाध्यक्ष):
+   - फ़ाइल का नाम: `satveer.jpg`
+   - पाथ: `/public/images/members/satveer.jpg`
 
-3. **योगेश वर्मा** (सदस्य):
-   - फ़ाइल का नाम: `yogesh-verma.jpg`
-   - पाथ: `/public/images/members/yogesh-verma.jpg`
-
-4. **जीवन देवी** (सदस्य):
-   - फ़ाइल का नाम: `jeevan-devi.jpg`
-   - पाथ: `/public/images/members/jeevan-devi.jpg`
-
-5. **गजवीर** (सदस्य):
-   - फ़ाइल का नाम: `gajveer.jpg`
-   - पाथ: `/public/images/members/gajveer.jpg`
-
-6. **अनीता वर्मा** (सदस्य):
-   - फ़ाइल का नाम: `aneeta-verma.jpg`
-   - पाथ: `/public/images/members/aneeta-verma.jpg`
-
-7. **जागन सिंह** (सदस्य):
-   - फ़ाइल का नाम: `jagan-singh.jpg`
-   - पाथ: `/public/images/members/jagan-singh.jpg`
-
-8. **समलेश वर्मा** (सदस्य):
-   - फ़ाइल का नाम: `samlesh-verma.jpg`
-   - पाथ: `/public/images/members/samlesh-verma.jpg`
-
-9. **ममता देवी** (सदस्य):
+3. **ममता देवी** (सचिव):
    - फ़ाइल का नाम: `mamta-devi.jpg`
    - पाथ: `/public/images/members/mamta-devi.jpg`
 
-10. **नुसरत** (सदस्य):
+4. **योगेश वर्मा** (कोषाध्यक्ष):
+   - फ़ाइल का नाम: `yogesh-verma.jpg`
+   - पाथ: `/public/images/members/yogesh-verma.jpg`
+
+### 3. सम्मानित ट्रस्टी सदस्यगण (Trustee Board Members)
+5. **टिंकू वर्मा** (सदस्य):
+   - फ़ाइल का नाम: `tinku-verma.jpg`
+   - पाथ: `/public/images/members/tinku-verma.jpg`
+
+6. **दीपक गिरी** (सदस्य):
+   - फ़ाइल का नाम: `deepak-giri.jpg` (उपलब्ध है ✓)
+   - पाथ: `/public/images/members/deepak-giri.jpg`
+
+7. **जीवन देवी** (सदस्य):
+   - फ़ाइल का नाम: `jeevan-devi.jpg`
+   - पाथ: `/public/images/members/jeevan-devi.jpg`
+
+8. **गजवीर** (सदस्य):
+   - फ़ाइल का नाम: `gajveer.jpg`
+   - पाथ: `/public/images/members/gajveer.jpg`
+
+9. **अनीता वर्मा** (सदस्य):
+   - फ़ाइल का नाम: `aneeta-verma.jpg`
+   - पाथ: `/public/images/members/aneeta-verma.jpg`
+
+10. **जागन सिंह** (सदस्य):
+    - फ़ाइल का नाम: `jagan-singh.jpg`
+    - पाथ: `/public/images/members/jagan-singh.jpg`
+
+11. **समलेश वर्मा** (सदस्य):
+    - फ़ाइल का नाम: `samlesh-verma.jpg`
+    - पाथ: `/public/images/members/samlesh-verma.jpg`
+
+12. **नुसरत** (सदस्य):
     - फ़ाइल का नाम: `nusrat.jpg`
     - पाथ: `/public/images/members/nusrat.jpg`
 

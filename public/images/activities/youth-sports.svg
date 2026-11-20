@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="250" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="60%" stop-color="#C2410C" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Rect -->
+  <rect width="400" height="250" fill="url(#bgGrad)" />
+  <rect width="400" height="250" fill="url(#sunGlow)" />
+
+  <!-- Sacred Geometry Pattern Watermark -->
+  <g opacity="0.08" stroke="#FFFFFF" stroke-width="1.5">
+    <circle cx="200" cy="105" r="85"/>
+    <circle cx="200" cy="105" r="65"/>
+    <circle cx="200" cy="105" r="45"/>
+    <polygon points="200,20 225,90 300,90 240,130 260,200 200,160 140,200 160,130 100,90 175,90"/>
+  </g>
+
+  <!-- Specific Central Iconography -->
+  
+      <!-- Victory Trophy & Radiant Stars -->
+      <circle cx="200" cy="100" r="50" fill="#FEF08A" opacity="0.3"/>
+      <!-- Trophy Cup -->
+      <path d="M175 65 L225 65 L220 100 C215 115 185 115 180 100 Z" fill="#FBBF24" stroke="#D97706" stroke-width="2"/>
+      <path d="M175 75 C160 75 160 90 176 92 M225 75 C240 75 240 90 224 92" stroke="#D97706" stroke-width="2" fill="none"/>
+      <path d="M195 115 L205 115 L205 130 L195 130 Z M185 130 L215 130" stroke="#B45309" stroke-width="3"/>
+    
+
+  <!-- Bottom Dark Vignette Bar -->
+  <rect y="175" width="400" height="75" fill="#000000" opacity="0.45" />
+
+  <!-- Hindi Title & Trust Badge -->
+  <text x="200" y="205" font-family="'Noto Sans Devanagari', 'Tiro Devanagari Hindi', sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    खेल एवं युवा विकास प्रकल्प
+  </text>
+  <text x="200" y="228" font-family="sans-serif" font-size="11" fill="#FDE68A" text-anchor="middle" letter-spacing="0.5">
+    कमला देवी पब्लिक सेवा मन्दिर ट्रस्ट • Youth Development & Rural Sports
+  </text>
+</svg>
