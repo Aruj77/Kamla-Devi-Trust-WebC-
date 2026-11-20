@@ -119,4 +119,17 @@ export const ACTIVITIES_DATA: ActivityItem[] = [
     descriptionHindi: 'किसानों की आय संवर्धन हेतु मधुमक्खी पालन (एपीकल्चर), व्यावसायिक पुष्प खेती तथा मशरूम उत्पादन का व्यावहारिक प्रशिक्षण।',
     descriptionEnglish: 'Training rural youth in profitable apiculture, commercial floriculture, and organic mushroom farming.',
   },
+  {
+    id: 'youth-sports',
+    titleHindi: 'खेल एवं युवा विकास प्रकल्प',
+    titleEnglish: 'Rural Youth Development & Sports',
+    category: 'swavlamban',
+    categoryLabelHindi: 'युवा विकास',
+    categoryLabelEnglish: 'Youth & Sports',
+    locationHindi: 'ग्रामीण खेल मैदान, जानसठ',
+    locationEnglish: 'Rural Sports Grounds, Jansath',
+    imagePath: '/images/activities/youth-sports.png',
+    descriptionHindi: 'ग्रामीण क्षेत्रों में खेल मैदानों का निर्माण, खेल सामग्री वितरण तथा युवाओं को शारीरिक व मानसिक विकास से जोड़ना।',
+    descriptionEnglish: 'Developing community playgrounds, distributing athletic kits, and channeling youth energy into constructive nation-building.',
+  },
 ];

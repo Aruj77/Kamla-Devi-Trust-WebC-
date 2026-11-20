@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Image as ImageIcon, Sparkles } from 'lucide-react';
 
 interface ImageWithFallbackProps {
@@ -22,28 +22,51 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   title,
   icon,
 }) => {
+  const [currentSrc, setCurrentSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+
+  useEffect(() => {
+    setCurrentSrc(src);
+    setHasError(false);
+    setAttempt(0);
+  }, [src]);
+
+  const handleError = () => {
+    // If the image fails, try alternate extensions before falling back to placeholder
+    if (attempt === 0) {
+      if (currentSrc.endsWith('.png')) {
+        setAttempt(1);
+        setCurrentSrc(currentSrc.replace('.png', '.jpg'));
+        return;
+      } else if (currentSrc.endsWith('.jpg')) {
+        setAttempt(1);
+        setCurrentSrc(currentSrc.replace('.jpg', '.png'));
+        return;
+      } else if (currentSrc.endsWith('.svg')) {
+        setAttempt(1);
+        setCurrentSrc(currentSrc.replace('.svg', '.png'));
+        return;
+      }
+    }
+    setHasError(true);
+  };
 
   return (
     <div
-      className={`relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50/50 to-amber-100/40 ${aspectRatio} ${className}`}
+      className={`relative overflow-hidden bg-amber-50/50 ${aspectRatio} ${className}`}
     >
       {!hasError ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={src}
+          src={currentSrc}
           alt={alt}
-          onLoad={() => setIsLoaded(true)}
-          onError={() => setHasError(true)}
-          className={`w-full h-full object-cover transition-all duration-700 ease-out ${
-            isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-          } group-hover:scale-105`}
+          loading="lazy"
+          onError={handleError}
+          className="w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
         />
-      ) : null}
-
-      {/* Fallback Placeholder (when image is not found or fails to load) */}
-      {hasError && (
+      ) : (
+        /* Fallback Placeholder (when image is not found or fails to load) */
         <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-amber-100/90 via-orange-100/70 to-amber-200/60 border border-dashed border-amber-300">
           {/* Subtle Sacred Mandala Background */}
           <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#c2410c_1.5px,transparent_1.5px)] [background-size:12px_12px] pointer-events-none" />
@@ -66,7 +89,7 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
           )}
 
           <span className="relative z-10 mt-1 text-[10px] text-sacred-brown/60 font-medium">
-            फोटो अपलोड हेतु स्थान ({src.split('/').pop()})
+            फोटो अपलोड स्थान ({src.split('/').pop()})
           </span>
         </div>
       )}

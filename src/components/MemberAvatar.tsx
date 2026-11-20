@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface MemberAvatarProps {
   src: string;
@@ -17,8 +17,9 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
   size = 'md',
   isPresident = false,
 }) => {
+  const [currentSrc, setCurrentSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [attempt, setAttempt] = useState(0);
 
   // Dimension classes based on size
   const sizeClasses = {
@@ -28,16 +29,28 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
     xl: 'w-36 h-36 sm:w-40 sm:h-40 text-4xl',
   }[size];
 
-  // If src changes, reset error
+  // If src changes, reset state
   useEffect(() => {
+    setCurrentSrc(src);
     setHasError(false);
-    // If the image was already cached and failed to load
-    if (imgRef.current && imgRef.current.complete) {
-      if (imgRef.current.naturalWidth === 0) {
-        setHasError(true);
+    setAttempt(0);
+  }, [src]);
+
+  const handleError = () => {
+    // If .jpg fails, try .png (and vice-versa) before showing initial avatar
+    if (attempt === 0) {
+      if (currentSrc.endsWith('.jpg')) {
+        setAttempt(1);
+        setCurrentSrc(currentSrc.replace('.jpg', '.png'));
+        return;
+      } else if (currentSrc.endsWith('.png')) {
+        setAttempt(1);
+        setCurrentSrc(currentSrc.replace('.png', '.jpg'));
+        return;
       }
     }
-  }, [src]);
+    setHasError(true);
+  };
 
   return (
     <div
@@ -50,11 +63,11 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
       {!hasError ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          ref={imgRef}
-          src={src}
+          src={currentSrc}
           alt={alt}
-          onError={() => setHasError(true)}
-          className="w-full h-full object-cover"
+          loading="lazy"
+          onError={handleError}
+          className="w-full h-full object-cover object-top"
         />
       ) : (
         /* Fallback Hindi-Initial Avatar only when image truly fails to load */
