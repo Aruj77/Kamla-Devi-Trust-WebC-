@@ -97,16 +97,35 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDonateModal }) => {
           {/* Col 3: Address & UPI Info */}
           <div className="lg:col-span-4 space-y-3">
             <h4 className="font-heading font-bold text-sm text-amber-200 tracking-wide pb-1.5 border-b border-amber-900/50">
-              {lang === 'hi' ? 'आधिकारिक पता एवं यूपीआई' : 'Address & UPI Info'}
+              {lang === 'hi' ? 'कार्यालय एवं केंद्र' : 'Offices & Centers'}
             </h4>
 
             <div className="space-y-2 text-xs text-ivory-200/80">
               <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-saffron-400 shrink-0 mt-0.5" />
-                <span>{lang === 'hi' ? TRUST_DATA.address.fullHindi : TRUST_DATA.address.fullEnglish}</span>
+                <div>
+                  <span className="font-semibold text-amber-200">{lang === 'hi' ? 'प्रधान कार्यालय: ' : 'Head Office: '}</span>
+                  <span>{lang === 'hi' ? TRUST_DATA.address.headOfficeHindi : TRUST_DATA.address.headOfficeEnglish}</span>
+                </div>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-semibold text-amber-200">{lang === 'hi' ? 'शाखा कार्यालय: ' : 'Branch Office: '}</span>
+                  <span>{lang === 'hi' ? TRUST_DATA.address.branchOfficeHindi : TRUST_DATA.address.branchOfficeEnglish}</span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-orange-400 shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-semibold text-amber-200">{lang === 'hi' ? 'वृद्ध आश्रम: ' : 'Old Age Home: '}</span>
+                  <span>{lang === 'hi' ? TRUST_DATA.address.ashramHindi : TRUST_DATA.address.ashramEnglish}</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 pt-1">
                 <Phone className="w-3.5 h-3.5 text-saffron-400 shrink-0" />
                 <span>{lang === 'hi' ? TRUST_DATA.contact.displayPhoneHindi : TRUST_DATA.contact.displayPhoneEnglish}</span>
               </div>

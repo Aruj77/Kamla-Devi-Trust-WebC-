@@ -137,6 +137,27 @@ export const About: React.FC = () => {
                 </div>
 
                 <div className="flex items-start justify-between gap-2 py-1 border-b border-amber-200/50">
+                  <span className="text-sacred-warmGray shrink-0">{lang === 'hi' ? 'प्रधान कार्यालय:' : 'Head Office:'}</span>
+                  <span className="font-semibold text-sacred-brown text-right">
+                    {lang === 'hi' ? 'ग्राम शुक्रताल, जानसठ (मुजफ्फरनगर)' : 'Shukratal, Jansath (UP)'}
+                  </span>
+                </div>
+
+                <div className="flex items-start justify-between gap-2 py-1 border-b border-amber-200/50">
+                  <span className="text-sacred-warmGray shrink-0">{lang === 'hi' ? 'शाखा कार्यालय:' : 'Branch Office:'}</span>
+                  <span className="font-semibold text-amber-900 text-right">
+                    {lang === 'hi' ? 'केनरा बैंक के सामने, स्योहारा रोड, नूरपुर' : 'Opp. Canara Bank, Seohara Rd, Noorpur'}
+                  </span>
+                </div>
+
+                <div className="flex items-start justify-between gap-2 py-1 border-b border-amber-200/50">
+                  <span className="text-sacred-warmGray shrink-0">{lang === 'hi' ? 'वृद्ध आश्रम:' : 'Old Age Home:'}</span>
+                  <span className="font-semibold text-orange-900 text-right">
+                    {lang === 'hi' ? 'ग्राम दरबड़ा, तहसील चांदपुर' : 'Village Darbada, Chandpur'}
+                  </span>
+                </div>
+
+                <div className="flex items-start justify-between gap-2 py-1 border-b border-amber-200/50">
                   <span className="text-sacred-warmGray shrink-0">{lang === 'hi' ? 'कार्यक्षेत्र:' : 'Scope:'}</span>
                   <span className="font-semibold text-saffron-800 text-right">
                     {lang === 'hi' ? 'संपूर्ण भारत वर्ष (एवं आवश्यकतानुसार बाहर भी)' : 'All India & Global'}
