@@ -9,41 +9,38 @@ export const DonationSection: React.FC = () => {
   const { lang } = useLanguage();
 
   return (
-    <section id="donate" className="py-14 sm:py-16 bg-gradient-to-b from-ivory-100 via-amber-50/40 to-ivory-50 relative overflow-hidden">
-      {/* Decorative background embellishments */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-full pointer-events-none opacity-30">
-        <div className="absolute top-10 left-10 w-60 h-60 rounded-full bg-amber-300/20 blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-saffron-300/20 blur-3xl" />
-      </div>
+    <section id="donate" className="py-16 sm:py-24 bg-gradient-to-b from-ivory-100 via-amber-50/50 to-ivory-50 relative overflow-hidden">
+      {/* Decorative Radiant Blobs for Glass Depth */}
+      <div className="absolute top-10 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-amber-300/30 via-saffron-300/20 to-transparent blur-3xl pointer-events-none animate-float-slow" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-gradient-to-tl from-saffron-300/25 via-amber-200/20 to-transparent blur-3xl pointer-events-none animate-float-reverse" />
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-6xl">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-          {/* Section Badge - Fixed Height & Centered */}
-          <div className="h-8 inline-flex items-center justify-center gap-1.5 px-3.5 rounded-full text-xs font-semibold bg-saffron-100 text-saffron-800 border border-saffron-200 mb-3 shadow-2xs leading-none">
-            <Heart className="w-3.5 h-3.5 text-saffron-600 fill-saffron-600 shrink-0" />
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12" data-reveal="fade-in">
+          <div className="min-h-[36px] inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold glass-badge text-saffron-950 mb-3 shadow-xs leading-none">
+            <Heart className="w-4 h-4 text-saffron-600 fill-saffron-600 shrink-0" />
             <span className="leading-none">{lang === 'hi' ? 'पुण्य दान • परोपकार सेवा' : 'Charitable Contribution'}</span>
           </div>
 
-          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-sacred-brown">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-sacred-brown leading-tight">
             {lang === 'hi' ? (
               <>
                 जनकल्याण हेतु आपका{' '}
-                <span className="text-saffron-700 underline decoration-amber-400 decoration-wavy decoration-2 underline-offset-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron-700 to-amber-700 underline decoration-amber-400 decoration-wavy decoration-2 underline-offset-8">
                   पावन सहयोग
                 </span>
               </>
             ) : (
               <>
                 Your Support for{' '}
-                <span className="text-saffron-700 underline decoration-amber-400 decoration-wavy decoration-2 underline-offset-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron-700 to-amber-700 underline decoration-amber-400 decoration-wavy decoration-2 underline-offset-8">
                   Universal Welfare
                 </span>
               </>
             )}
           </h2>
 
-          <p className="mt-2 text-xs sm:text-sm text-sacred-brown/80 max-w-xl mx-auto">
+          <p className="mt-3 text-xs sm:text-sm md:text-base text-sacred-brown/85 max-w-xl mx-auto leading-relaxed">
             {lang === 'hi'
               ? 'आपके द्वारा समर्पित किया गया प्रत्येक अंश निराश्रित वृद्धजनों के आश्रय, निर्धन बालकों की उच्च शिक्षा, निःशुल्क चिकित्सा एवं सनातन धर्म के संवर्धन में समर्पित होता है।'
               : 'Every contribution directly supports destitute elder care, free quality education for needy students, healthcare relief, and preserving our cultural values.'}
@@ -51,19 +48,21 @@ export const DonationSection: React.FC = () => {
         </div>
 
         {/* The Live Interactive Donation Card */}
-        <DonationCard isModal={false} />
+        <div data-reveal="zoom-in">
+          <DonationCard isModal={false} />
+        </div>
 
-        {/* 3 Pillars of Impact beneath Donation */}
-        <div className="mt-8 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4">
-          <div className="flex items-start gap-2.5 bg-white/90 backdrop-blur-xs p-3.5 rounded-xl border border-amber-200/80 shadow-2xs">
-            <div className="w-7 h-7 rounded-lg bg-saffron-100 text-saffron-700 flex items-center justify-center shrink-0 mt-0.5">
+        {/* 3 Pillars of Impact beneath Donation in Frosted Glass */}
+        <div className="mt-10 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4" data-reveal="fade-in">
+          <div className="flex items-start gap-3 glass-panel p-4.5 rounded-2xl hover:shadow-md transition-shadow">
+            <div className="w-8 h-8 rounded-xl bg-saffron-100 text-saffron-700 flex items-center justify-center shrink-0 mt-0.5 border border-amber-200">
               <CheckCircle2 className="w-4 h-4" />
             </div>
             <div>
               <h4 className="font-bold text-sacred-brown text-xs sm:text-sm leading-snug">
                 {lang === 'hi' ? 'शत-प्रतिशत पारदर्शिता' : '100% Transparency'}
               </h4>
-              <p className="text-[11px] text-sacred-brown/80 mt-0.5 leading-snug">
+              <p className="text-[11px] sm:text-xs text-sacred-brown/80 mt-1 leading-relaxed">
                 {lang === 'hi'
                   ? 'सीए द्वारा वार्षिक ऑडिट एवं आयकर अधिनियम 1961 के तहत पूर्णतः सुरक्षित।'
                   : 'Independent CA audit & full IT Act Section 11(5) compliance.'}
@@ -71,34 +70,34 @@ export const DonationSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex items-start gap-2.5 bg-white/90 backdrop-blur-xs p-3.5 rounded-xl border border-amber-200/80 shadow-2xs">
-            <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5">
+          <div className="flex items-start gap-3 glass-panel p-4.5 rounded-2xl hover:shadow-md transition-shadow">
+            <div className="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 mt-0.5 border border-amber-200">
               <Sparkles className="w-4 h-4" />
             </div>
             <div>
               <h4 className="font-bold text-sacred-brown text-xs sm:text-sm leading-snug">
                 {lang === 'hi' ? 'प्रत्यक्ष सेवा उपयोग' : 'Direct Impact'}
               </h4>
-              <p className="text-[11px] text-sacred-brown/80 mt-0.5 leading-snug">
+              <p className="text-[11px] sm:text-xs text-sacred-brown/80 mt-1 leading-relaxed">
                 {lang === 'hi'
-                  ? 'शिक्षा, चिकित्सा, अन्न-क्षेत्र एवं असहाय वृद्धजन सेवा में सीधा विनियोग।'
-                  : 'Immediate deployment in food relief, education, and elder shelter.'}
+                  ? 'निराश्रित गोवंश, असहाय वृद्धजन व जरूरतमंद छात्रों की सेवा में सीधा व्यय।'
+                  : 'Direct deployment for cow protection, destitute elder care & needy students.'}
               </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-2.5 bg-white/90 backdrop-blur-xs p-3.5 rounded-xl border border-amber-200/80 shadow-2xs">
-            <div className="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+          <div className="flex items-start gap-3 glass-panel p-4.5 rounded-2xl hover:shadow-md transition-shadow">
+            <div className="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200">
               <CheckCircle2 className="w-4 h-4" />
             </div>
             <div>
               <h4 className="font-bold text-sacred-brown text-xs sm:text-sm leading-snug">
-                {lang === 'hi' ? 'तुरंत डिजिटल रसीद' : 'Direct Receipt'}
+                {lang === 'hi' ? 'तत्काल UPI रसीद' : 'Instant UPI Receipt'}
               </h4>
-              <p className="text-[11px] text-sacred-brown/80 mt-0.5 leading-snug">
+              <p className="text-[11px] sm:text-xs text-sacred-brown/80 mt-1 leading-relaxed">
                 {lang === 'hi'
-                  ? 'UPI संदर्भ संख्या के साथ ट्रस्ट कार्यालय से पावती रसीद प्राप्त करें।'
-                  : 'Receive formal trust receipt against your transaction reference.'}
+                  ? 'डिजिटल बैंक ट्रांसफर की डिजिटल पावती सीधे आपके बैंक खाते में उपलब्ध।'
+                  : 'Instant digital transaction acknowledgment in your banking app.'}
               </p>
             </div>
           </div>

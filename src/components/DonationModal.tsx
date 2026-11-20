@@ -40,7 +40,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto bg-black/70 backdrop-blur-md animate-in fade-in duration-200"
       role="dialog"
       aria-modal="true"
       aria-labelledby="donation-modal-title"
@@ -53,12 +53,12 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
       />
 
       {/* Modal Dialog Card: Constrained max-height so it NEVER overflows */}
-      <div className="relative w-full max-w-lg max-h-[92vh] flex flex-col bg-white rounded-2xl shadow-2xl border border-amber-300 overflow-hidden my-auto">
+      <div className="relative w-full max-w-lg max-h-[92vh] flex flex-col glass-panel-warm rounded-3xl shadow-2xl border-2 border-amber-300 overflow-hidden my-auto">
         {/* Sleek Compact Modal Header */}
-        <div className="bg-gradient-to-r from-saffron-700 via-saffron-600 to-sacred-gold px-4 py-3 text-white flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
-              <Heart className="w-3.5 h-3.5 fill-white text-white" />
+        <div className="bg-gradient-to-r from-saffron-700 via-saffron-600 to-sacred-gold px-5 py-3.5 text-white flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shadow-xs">
+              <Heart className="w-4 h-4 fill-white text-white" />
             </div>
             <div>
               <h2 id="donation-modal-title" className="font-heading font-bold text-sm sm:text-base leading-tight">
@@ -74,7 +74,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
           <button
             type="button"
             onClick={onClose}
-            className="w-7 h-7 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+            className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
             aria-label={lang === 'hi' ? 'दान खिड़की बंद करें' : 'Close donation dialog'}
           >
             <X className="w-4 h-4" />

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { ScrollObserver } from '@/components/ScrollObserver';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
@@ -26,6 +27,9 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col bg-ivory-50 text-sacred-brown">
+      {/* Scroll-triggered reveal animations */}
+      <ScrollObserver />
+
       {/* Sticky Header with Navigation & Quick Donate */}
       <Navbar onOpenDonateModal={handleOpenDonateModal} />
 

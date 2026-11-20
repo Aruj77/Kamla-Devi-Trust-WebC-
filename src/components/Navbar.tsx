@@ -49,10 +49,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDonateModal }) => {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full transition-all duration-200 ${
+      className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         isScrolled
-          ? 'bg-ivory-50/95 backdrop-blur-md shadow-xs border-b border-amber-200/90 py-2'
-          : 'bg-ivory-50/90 backdrop-blur-sm border-b border-amber-100 py-2.5 sm:py-3'
+          ? 'bg-white/85 backdrop-blur-xl shadow-md border-b border-amber-200/70 py-2'
+          : 'bg-white/75 backdrop-blur-lg border-b border-amber-200/40 py-2.5 sm:py-3'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -146,16 +146,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDonateModal }) => {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown Menu with Frosted Glass */}
         {mobileMenuOpen && (
-          <div className="xl:hidden pt-3 pb-2.5 border-t border-amber-200 mt-2.5 animate-in slide-in-from-top-1 duration-150">
+          <div className="xl:hidden glass-panel rounded-2xl p-4 mt-3 border border-amber-200 shadow-xl animate-in slide-in-from-top-1 duration-200">
             <nav className="flex flex-col space-y-1" aria-label="मोबाइल नेविगेशन">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={handleLinkClick}
-                  className="px-3 py-2 rounded-lg text-sm font-semibold text-sacred-brown hover:bg-saffron-50 hover:text-saffron-700 transition-colors"
+                  className="px-3.5 py-2 rounded-xl text-sm font-semibold text-sacred-brown hover:bg-saffron-50 hover:text-saffron-700 transition-colors"
                 >
                   {link.name}
                 </a>
@@ -167,7 +167,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDonateModal }) => {
                     setMobileMenuOpen(false);
                     onOpenDonateModal();
                   }}
-                  className="w-full h-11 inline-flex items-center justify-center gap-2 bg-saffron-600 hover:bg-saffron-700 text-white font-bold px-4 rounded-xl shadow-xs text-sm text-center leading-none"
+                  className="w-full h-11 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-saffron-600 to-saffron-700 hover:from-saffron-700 hover:to-saffron-800 text-white font-bold px-4 rounded-xl shadow-md text-sm text-center leading-none"
                 >
                   <Heart className="w-4 h-4 fill-white shrink-0" />
                   <span className="leading-none">{lang === 'hi' ? 'ऑनलाइन दान करें (UPI)' : 'Donate Online via UPI'}</span>

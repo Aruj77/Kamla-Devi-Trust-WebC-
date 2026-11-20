@@ -48,6 +48,12 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
         setCurrentSrc(currentSrc.replace('.svg', '.webp'));
         return;
       }
+    } else if (attempt === 1) {
+      if (currentSrc.endsWith('.webp')) {
+        setAttempt(2);
+        setCurrentSrc(currentSrc.replace('.webp', '.svg'));
+        return;
+      }
     }
     setHasError(true);
   };

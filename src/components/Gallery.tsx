@@ -28,34 +28,35 @@ export const Gallery: React.FC = () => {
       : ACTIVITIES_DATA.filter((item) => item.category === activeTab);
 
   return (
-    <section id="gallery" className="py-14 sm:py-20 bg-ivory-100/60 relative overflow-hidden">
+    <section id="gallery" className="py-16 sm:py-24 bg-ivory-50 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[radial-gradient(#c2410c_1.5px,transparent_1.5px)] [background-size:24px_24px]" />
-      <div className="absolute top-10 right-0 w-72 h-72 rounded-full bg-amber-200/20 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -right-20 w-80 h-80 rounded-full bg-gradient-to-br from-amber-300/25 to-saffron-300/15 blur-3xl pointer-events-none animate-float-slow" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-amber-400/15 blur-3xl pointer-events-none" />
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-6xl">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-          <div className="h-8 inline-flex items-center justify-center gap-1.5 px-3.5 rounded-full text-xs font-semibold bg-amber-100 text-saffron-900 border border-amber-300 shadow-2xs mb-3 leading-none">
-            <Camera className="w-3.5 h-3.5 text-saffron-700 shrink-0" />
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14" data-reveal="fade-in">
+          <div className="min-h-[36px] inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold glass-badge text-saffron-950 mb-3 shadow-xs leading-none">
+            <Camera className="w-4 h-4 text-saffron-700 shrink-0" />
             <span className="leading-none">
               {lang === 'hi' ? 'सेवा दर्शन एवं चित्र वीथिका' : 'Field Work & Photo Gallery'}
             </span>
           </div>
 
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-sacred-brown">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-sacred-brown leading-tight">
             {lang === 'hi' ? 'ट्रस्ट के सेवा कार्य एवं गतिविधियां' : 'Activities & Live Seva Glimpses'}
           </h2>
 
-          <p className="mt-2.5 text-xs sm:text-sm text-sacred-brown/80 max-w-xl mx-auto">
+          <p className="mt-3 text-xs sm:text-sm md:text-base text-sacred-brown/85 max-w-xl mx-auto leading-relaxed">
             {lang === 'hi'
               ? 'पावन शुक्रताल तीर्थ एवं मुजफ्फरनगर परिक्षेत्र में संचालित गौ सेवा, अन्नदान, स्वास्थ्य एवं सामाजिक सेवा प्रकल्प'
               : 'Glimpses of selfless cow protection, daily annakshetra, health checkups, and spiritual programs at Shukratal'}
           </p>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10 max-w-4xl mx-auto">
+        {/* Filter Tabs in Frosted Glass */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-12 max-w-4xl mx-auto" data-reveal="fade-in">
           {filterTabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (
@@ -63,10 +64,10 @@ export const Gallery: React.FC = () => {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`h-9 px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 inline-flex items-center justify-center leading-none ${
+                className={`min-h-[38px] px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 inline-flex items-center justify-center leading-none ${
                   isActive
-                    ? 'bg-gradient-to-r from-saffron-600 to-saffron-700 text-white shadow-xs scale-105'
-                    : 'bg-white hover:bg-amber-50 text-sacred-brown/85 border border-amber-200 hover:border-amber-300 shadow-2xs'
+                    ? 'bg-gradient-to-r from-saffron-600 to-saffron-700 text-white shadow-md scale-105'
+                    : 'glass-badge hover:bg-white text-sacred-brown hover:text-saffron-800 shadow-2xs hover:shadow-xs'
                 }`}
               >
                 <span>{lang === 'hi' ? tab.labelHindi : tab.labelEnglish}</span>
@@ -75,13 +76,14 @@ export const Gallery: React.FC = () => {
           })}
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Gallery Grid with Glassmorphic Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 max-w-6xl mx-auto">
           {filteredItems.map((item) => (
             <div
               key={item.id}
+              data-reveal="zoom-in"
               onClick={() => setSelectedItem(item)}
-              className="group cursor-pointer bg-white rounded-2xl border border-amber-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 overflow-hidden flex flex-col"
+              className="group cursor-pointer glass-panel rounded-3xl border border-white/85 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col justify-between"
             >
               {/* Image Frame */}
               <div className="relative overflow-hidden aspect-[16/11]">
@@ -96,18 +98,18 @@ export const Gallery: React.FC = () => {
                 {/* Subtle Gradient Vignette */}
                 <div className="absolute inset-0 bg-gradient-to-t from-sacred-brown/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                {/* Real Photo Badge (if original photo uploaded) */}
+                {/* Top Badge */}
                 {item.isRealPhoto ? (
                   <div className="absolute top-3 right-3 z-10">
-                    <span className="h-6 inline-flex items-center gap-1 px-2.5 rounded-full text-[10px] font-bold bg-emerald-600/95 text-white shadow-xs backdrop-blur-xs leading-none">
-                      <CheckCircle2 className="w-3 h-3 shrink-0" />
+                    <span className="min-h-[28px] inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-600 text-white shadow-md leading-none">
+                      <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
                       <span>{lang === 'hi' ? 'वास्तविक छायाचित्र' : 'Original Photo'}</span>
                     </span>
                   </div>
                 ) : (
                   <div className="absolute top-3 right-3 z-10">
-                    <span className="h-6 inline-flex items-center gap-1 px-2.5 rounded-full text-[10px] font-bold bg-saffron-600/90 text-white shadow-xs backdrop-blur-xs leading-none">
-                      <Sparkles className="w-2.5 h-2.5 shrink-0" />
+                    <span className="min-h-[28px] inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold glass-badge text-saffron-900 border border-amber-300 shadow-sm leading-none">
+                      <Sparkles className="w-3 h-3 text-saffron-600 shrink-0" />
                       <span>{lang === 'hi' ? item.categoryLabelHindi : item.categoryLabelEnglish}</span>
                     </span>
                   </div>
@@ -115,36 +117,38 @@ export const Gallery: React.FC = () => {
 
                 {/* Hover Zoom Icon Pill */}
                 <div className="absolute bottom-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <span className="h-7 w-7 rounded-full bg-white/95 text-saffron-700 flex items-center justify-center shadow-md">
+                  <span className="h-8 w-8 rounded-full glass-panel text-saffron-700 flex items-center justify-center shadow-md">
                     <ZoomIn className="w-4 h-4" />
                   </span>
                 </div>
               </div>
 
               {/* Card Content */}
-              <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                 <div>
                   {/* Location badge */}
-                  <div className="inline-flex items-center gap-1 text-[11px] text-sacred-warmGray font-medium mb-1.5">
-                    <MapPin className="w-3 h-3 text-saffron-600 shrink-0" />
+                  <div className="inline-flex items-center gap-1.5 text-xs text-sacred-warmGray font-medium mb-2">
+                    <MapPin className="w-3.5 h-3.5 text-saffron-600 shrink-0" />
                     <span>{lang === 'hi' ? item.locationHindi : item.locationEnglish}</span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-heading text-base sm:text-lg font-bold text-sacred-brown group-hover:text-saffron-700 transition-colors duration-200 line-clamp-1 mb-2">
+                  <h3 className="font-heading text-base sm:text-lg font-bold text-sacred-brown group-hover:text-saffron-700 transition-colors duration-200 line-clamp-1 mb-2 leading-snug">
                     {lang === 'hi' ? item.titleHindi : item.titleEnglish}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs text-sacred-brown/80 leading-relaxed line-clamp-2">
+                  <p className="text-xs sm:text-sm text-sacred-brown/80 leading-relaxed line-clamp-2">
                     {lang === 'hi' ? item.descriptionHindi : item.descriptionEnglish}
                   </p>
                 </div>
 
                 {/* Read More Footer */}
-                <div className="pt-3 mt-3 border-t border-amber-100 flex items-center justify-between text-xs font-semibold text-saffron-700">
-                  <span>{lang === 'hi' ? 'विवरण एवं फोटो देखें →' : 'View Details & Zoom →'}</span>
-                  <span className="text-[11px] text-sacred-warmGray font-normal">
+                <div className="pt-3.5 mt-4 border-t border-amber-100 flex items-center justify-between text-xs font-semibold text-saffron-700">
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    {lang === 'hi' ? 'विवरण एवं फोटो देखें →' : 'View Details & Zoom →'}
+                  </span>
+                  <span className="text-[11px] text-sacred-warmGray font-medium">
                     {lang === 'hi' ? 'शुक्रताल न्यास' : 'Shukratal Trust'}
                   </span>
                 </div>
@@ -154,75 +158,57 @@ export const Gallery: React.FC = () => {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal with Frosted Glass Backdrop */}
       {selectedItem && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-sm animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
           onClick={() => setSelectedItem(null)}
+          role="dialog"
+          aria-modal="true"
         >
           <div
-            className="relative max-w-2xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl border border-amber-200 animate-in zoom-in-95 duration-200"
+            className="relative glass-panel rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl border border-white/30"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               type="button"
               onClick={() => setSelectedItem(null)}
-              className="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+              className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full glass-panel text-sacred-brown hover:text-saffron-700 flex items-center justify-center shadow-md transition-colors"
+              aria-label="बंद करें"
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" />
             </button>
 
             {/* Modal Image */}
-            <div className="relative aspect-[16/10] bg-sacred-brown">
+            <div className="relative aspect-[16/10] bg-black">
               <ImageWithFallback
                 src={selectedItem.imagePath}
                 alt={lang === 'hi' ? selectedItem.titleHindi : selectedItem.titleEnglish}
                 aspectRatio="aspect-[16/10]"
-                categoryTag={
-                  lang === 'hi' ? selectedItem.categoryLabelHindi : selectedItem.categoryLabelEnglish
-                }
-                title={lang === 'hi' ? selectedItem.titleHindi : selectedItem.titleEnglish}
+                className="w-full h-full object-contain"
               />
             </div>
 
-            {/* Modal Details */}
-            <div className="p-5 sm:p-6">
-              <div className="flex items-center gap-2 text-xs text-saffron-700 font-bold mb-1">
-                <MapPin className="w-3.5 h-3.5 shrink-0" />
-                <span>
-                  {lang === 'hi' ? selectedItem.locationHindi : selectedItem.locationEnglish}
+            {/* Modal Info */}
+            <div className="p-5 sm:p-6 bg-white/95">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="min-h-[26px] px-3 inline-flex items-center rounded-full text-xs font-bold bg-amber-100 text-saffron-900 border border-amber-300">
+                  {lang === 'hi' ? selectedItem.categoryLabelHindi : selectedItem.categoryLabelEnglish}
                 </span>
-                <span>•</span>
-                <span>
-                  {lang === 'hi'
-                    ? selectedItem.categoryLabelHindi
-                    : selectedItem.categoryLabelEnglish}
+                <span className="inline-flex items-center gap-1 text-xs text-sacred-warmGray">
+                  <MapPin className="w-3.5 h-3.5 text-saffron-600" />
+                  <span>{lang === 'hi' ? selectedItem.locationHindi : selectedItem.locationEnglish}</span>
                 </span>
               </div>
 
-              <h3 className="font-heading text-lg sm:text-xl font-bold text-sacred-brown mb-2.5">
+              <h3 className="font-heading text-lg sm:text-xl font-bold text-sacred-brown mb-2">
                 {lang === 'hi' ? selectedItem.titleHindi : selectedItem.titleEnglish}
               </h3>
 
-              <p className="text-xs sm:text-sm text-sacred-brown/85 leading-relaxed mb-5">
+              <p className="text-xs sm:text-sm text-sacred-brown/85 leading-relaxed">
                 {lang === 'hi' ? selectedItem.descriptionHindi : selectedItem.descriptionEnglish}
               </p>
-
-              <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-amber-100 text-xs">
-                <span className="text-sacred-warmGray">
-                  {lang === 'hi'
-                    ? 'स्थान: ग्राम शुक्रताल, जानसठ (मुजफ्फरनगर)'
-                    : 'Location: Shukratal, Jansath, UP'}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => setSelectedItem(null)}
-                  className="h-8 px-4 rounded-lg bg-saffron-600 hover:bg-saffron-700 text-white font-bold leading-none inline-flex items-center justify-center"
-                >
-                  {lang === 'hi' ? 'बंद करें' : 'Close'}
-                </button>
-              </div>
             </div>
           </div>
         </div>
