@@ -35,17 +35,17 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   const handleError = () => {
     // If the image fails, try alternate extensions before falling back to placeholder
     if (attempt === 0) {
-      if (currentSrc.endsWith('.png')) {
+      if (currentSrc.endsWith('.webp')) {
         setAttempt(1);
-        setCurrentSrc(currentSrc.replace('.png', '.jpg'));
+        setCurrentSrc(currentSrc.replace('.webp', '.webp'));
         return;
-      } else if (currentSrc.endsWith('.jpg')) {
+      } else if (currentSrc.endsWith('.webp')) {
         setAttempt(1);
-        setCurrentSrc(currentSrc.replace('.jpg', '.png'));
+        setCurrentSrc(currentSrc.replace('.webp', '.webp'));
         return;
       } else if (currentSrc.endsWith('.svg')) {
         setAttempt(1);
-        setCurrentSrc(currentSrc.replace('.svg', '.png'));
+        setCurrentSrc(currentSrc.replace('.svg', '.webp'));
         return;
       }
     }

@@ -141,7 +141,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDonateModal }) => {
               {/* Main Image Frame */}
               <div className="relative rounded-3xl overflow-hidden bg-white shadow-xl border-2 border-amber-300/90 aspect-[4/3] sm:aspect-[16/12]">
                 <ImageWithFallback
-                  src="/images/hero/hero-trust.jpg"
+                  src="/images/hero/hero-trust.webp"
                   alt={lang === 'hi' ? 'कमला देवी ट्रस्ट - पावन गौशाला एवं तीर्थ दर्शन' : 'Kamla Devi Trust Hero'}
                   aspectRatio="aspect-[4/3] sm:aspect-[16/12]"
                   categoryTag={lang === 'hi' ? 'शुक्रताल पावन तीर्थ' : 'Shukratal Pilgrimage'}

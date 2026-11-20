@@ -37,15 +37,15 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
   }, [src]);
 
   const handleError = () => {
-    // If .jpg fails, try .png (and vice-versa) before showing initial avatar
+    // If .webp fails, try .webp (and vice-versa) before showing initial avatar
     if (attempt === 0) {
-      if (currentSrc.endsWith('.jpg')) {
+      if (currentSrc.endsWith('.webp')) {
         setAttempt(1);
-        setCurrentSrc(currentSrc.replace('.jpg', '.png'));
+        setCurrentSrc(currentSrc.replace('.webp', '.webp'));
         return;
-      } else if (currentSrc.endsWith('.png')) {
+      } else if (currentSrc.endsWith('.webp')) {
         setAttempt(1);
-        setCurrentSrc(currentSrc.replace('.png', '.jpg'));
+        setCurrentSrc(currentSrc.replace('.webp', '.webp'));
         return;
       }
     }
@@ -54,11 +54,10 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
 
   return (
     <div
-      className={`relative rounded-full select-none overflow-hidden flex items-center justify-center transition-transform duration-200 ${sizeClasses} ${
-        isPresident
-          ? 'ring-4 ring-saffron-600 ring-offset-4 ring-offset-ivory-50 shadow-md'
-          : 'ring-2 ring-saffron-400 ring-offset-2 ring-offset-ivory-50 shadow-xs'
-      }`}
+      className={`relative rounded-full select-none overflow-hidden flex items-center justify-center transition-transform duration-200 ${sizeClasses} ${isPresident
+        ? 'ring-4 ring-saffron-600 ring-offset-4 ring-offset-ivory-50 shadow-md'
+        : 'ring-2 ring-saffron-400 ring-offset-2 ring-offset-ivory-50 shadow-xs'
+        }`}
     >
       {!hasError ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -72,17 +71,15 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
       ) : (
         /* Fallback Hindi-Initial Avatar only when image truly fails to load */
         <div
-          className={`w-full h-full flex flex-col items-center justify-center bg-gradient-to-br ${
-            isPresident
-              ? 'from-saffron-600 via-saffron-700 to-sacred-brown text-white'
-              : 'from-amber-100 via-orange-100 to-amber-200 text-saffron-900 border-2 border-dashed border-saffron-300'
-          }`}
+          className={`w-full h-full flex flex-col items-center justify-center bg-gradient-to-br ${isPresident
+            ? 'from-saffron-600 via-saffron-700 to-sacred-brown text-white'
+            : 'from-amber-100 via-orange-100 to-amber-200 text-saffron-900 border-2 border-dashed border-saffron-300'
+            }`}
           title={`${alt} (प्रतीकात्मक अवतार)`}
         >
           <span
-            className={`font-heading font-bold select-none ${
-              isPresident ? 'text-white drop-shadow' : 'text-saffron-800'
-            }`}
+            className={`font-heading font-bold select-none ${isPresident ? 'text-white drop-shadow' : 'text-saffron-800'
+              }`}
           >
             {initials}
           </span>

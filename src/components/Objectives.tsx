@@ -46,21 +46,21 @@ export const Objectives: React.FC = () => {
   const getObjectiveImage = (id: number) => {
     switch (id) {
       case 1:
-        return '/images/activities/shukratal-vatvriksh.png';
+        return '/images/activities/shukratal-vatvriksh.webp';
       case 2:
-        return '/images/activities/vidyalaya-education.png';
+        return '/images/activities/vidyalaya-education.webp';
       case 3:
-        return '/images/activities/medical-camp.png';
+        return '/images/activities/medical-camp.webp';
       case 4:
-        return '/images/activities/vriddh-ashram.png';
+        return '/images/activities/vriddh-ashram.webp';
       case 5:
-        return '/images/activities/women-empowerment.png';
+        return '/images/activities/women-empowerment.webp';
       case 6:
-        return '/images/activities/youth-sports.png';
+        return '/images/activities/youth-sports.webp';
       case 7:
-        return '/images/activities/krishi-swavlamban.png';
+        return '/images/activities/krishi-swavlamban.webp';
       default:
-        return '/images/activities/shukratal-vatvriksh.png';
+        return '/images/activities/shukratal-vatvriksh.webp';
     }
   };
 
@@ -93,7 +93,7 @@ export const Objectives: React.FC = () => {
               <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md border border-amber-200 relative group aspect-[4/3] sm:aspect-[16/10]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/activities/gaushala.jpg"
+                  src="/images/activities/gaushala.webp"
                   alt={lang === 'hi' ? 'पावन गौशाला - शुक्रताल' : 'Shukratal Gaushala'}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -146,9 +146,8 @@ export const Objectives: React.FC = () => {
             return (
               <div
                 key={obj.id}
-                className={`bg-white rounded-2xl border border-amber-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 overflow-hidden ${
-                  isSeventh ? 'md:col-span-2 lg:col-span-3 lg:max-w-2xl lg:mx-auto w-full' : ''
-                }`}
+                className={`bg-white rounded-2xl border border-amber-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 overflow-hidden ${isSeventh ? 'md:col-span-2 lg:col-span-3 lg:max-w-2xl lg:mx-auto w-full' : ''
+                  }`}
               >
                 {/* Visual Header Image */}
                 <div className="relative aspect-[16/9] overflow-hidden border-b border-amber-100">

@@ -39,22 +39,22 @@
 ट्रस्टी एवं सदस्यों की फोटो `/public/images/members/` फोल्डर में निम्नलिखित नामों से रखें:
 
 ### आजीवन अध्यक्ष
-1. **श्री धीरज सिंह चौहान** (आजीवन अध्यक्ष / मुख्य ट्रस्टी): `dheeraj-singh.jpg`
+1. **श्री धीरज सिंह चौहान** (आजीवन अध्यक्ष / मुख्य ट्रस्टी): `dheeraj-singh.webp`
 
 ### प्रमुख कार्यकारी पदाधिकारी
-2. **सतवीर** (उपाध्यक्ष): `satveer.jpg`
-3. **ममता देवी** (सचिव): `mamta-devi.jpg`
-4. **योगेश वर्मा** (कोषाध्यक्ष): `yogesh-verma.jpg`
+2. **सतवीर** (उपाध्यक्ष): `satveer.webp`
+3. **ममता देवी** (सचिव): `mamta-devi.webp`
+4. **योगेश वर्मा** (कोषाध्यक्ष): `yogesh-verma.webp`
 
 ### सम्मानित ट्रस्टी सदस्यगण
-5. **टिंकू वर्मा** (सदस्य): `tinku-verma.jpg`
-6. **दीपक गिरी** (सदस्य): `deepak-giri.jpg` (उपलब्ध ✓)
-7. **जीवन देवी** (सदस्य): `jeevan-devi.jpg`
-8. **गजवीर** (सदस्य): `gajveer.jpg`
-9. **अनीता वर्मा** (सदस्य): `aneeta-verma.jpg`
-10. **जागन सिंह** (सदस्य): `jagan-singh.jpg`
-11. **समलेश वर्मा** (सदस्य): `samlesh-verma.jpg`
-12. **नुसरत** (सदस्य): `nusrat.jpg`
+5. **टिंकू वर्मा** (सदस्य): `tinku-verma.webp`
+6. **दीपक गिरी** (सदस्य): `deepak-giri.webp` (उपलब्ध ✓)
+7. **जीवन देवी** (सदस्य): `jeevan-devi.webp`
+8. **गजवीर** (सदस्य): `gajveer.webp`
+9. **अनीता वर्मा** (सदस्य): `aneeta-verma.webp`
+10. **जागन सिंह** (सदस्य): `jagan-singh.webp`
+11. **समलेश वर्मा** (सदस्य): `samlesh-verma.webp`
+12. **नुसरत** (सदस्य): `nusrat.webp`
 
 > **नोट:** फोटो न होने की स्थिति में `MemberAvatar` कॉम्पोनेन्ट स्वतः भगवा-स्वर्णिम बॉर्डर वाला देवनागरी आद्याक्षर (Initial) अवतार दिखाता है, जिससे वेबसाइट तत्काल भी 100% पूर्ण और सुंदर दिखाई देती है।
 
@@ -63,14 +63,14 @@
 ## 🖼️ सेवा गतिविधियां एवं चित्र वीथिका (Activities & Photo Gallery)
 
 ट्रस्ट की सेवा गतिविधियों के फोटो `/public/images/activities/` फोल्डर में रखे जाते हैं:
-- **गौ सेवा (गौशाला):** `public/images/activities/gaushala.jpg` (वास्तविक छायाचित्र शामिल है ✓)
-- **अन्नक्षेत्र लंगर:** `public/images/activities/annakshetra.png` (अथवा `annakshetra.jpg`)
-- **शुक्रताल तीर्थ व वटवृक्ष:** `public/images/activities/shukratal-vatvriksh.png` (अथवा `.jpg`)
-- **चिकित्सा शिविर:** `public/images/activities/medical-camp.png` (अथवा `.jpg`)
-- **बाल शिक्षा व विद्यालय:** `public/images/activities/vidyalaya-education.png` (अथवा `.jpg`)
-- **वृद्धजन सेवा:** `public/images/activities/vriddh-ashram.png` (अथवा `.jpg`)
-- **महिला स्वावलंबन:** `public/images/activities/women-empowerment.png` (अथवा `.jpg`)
-- **जैविक कृषि व मधुमक्खी पालन:** `public/images/activities/krishi-swavlamban.png` (अथवा `.jpg`)
+- **गौ सेवा (गौशाला):** `public/images/activities/gaushala.webp` (वास्तविक छायाचित्र शामिल है ✓)
+- **अन्नक्षेत्र लंगर:** `public/images/activities/annakshetra.webp` (अथवा `annakshetra.webp`)
+- **शुक्रताल तीर्थ व वटवृक्ष:** `public/images/activities/shukratal-vatvriksh.webp` (अथवा `.webp`)
+- **चिकित्सा शिविर:** `public/images/activities/medical-camp.webp` (अथवा `.webp`)
+- **बाल शिक्षा व विद्यालय:** `public/images/activities/vidyalaya-education.webp` (अथवा `.webp`)
+- **वृद्धजन सेवा:** `public/images/activities/vriddh-ashram.webp` (अथवा `.webp`)
+- **महिला स्वावलंबन:** `public/images/activities/women-empowerment.webp` (अथवा `.webp`)
+- **जैविक कृषि व मधुमक्खी पालन:** `public/images/activities/krishi-swavlamban.webp` (अथवा `.webp`)
 
 ---
 
@@ -136,10 +136,10 @@ npm run build
 
 ## 🎨 फेविकॉन एवं लोगो (Favicon & Icons)
 
-- **Vector Favicon (SVG):** `/public/icon.png` — रेटिना एवं हाई-डीपीआई डिस्प्ले हेतु क्रिस्टल-क्लियर।
+- **Vector Favicon (SVG):** `/public/icon.webp` — रेटिना एवं हाई-डीपीआई डिस्प्ले हेतु क्रिस्टल-क्लियर।
 - **Legacy Favicon (ICO):** `/public/favicon.ico` — 32x32 पिक्सल पारंपरिक ब्राउज़र कम्पैटिबिलिटी।
 - **Apple Touch Icon:** iOS होम स्क्रीन और सफारी बुकमार्क हेतु अनुकूलित।
-- **Sacred Emblem:** `/public/emblem.png` — पारम्परिक कमल, दीप एवं स्वर्णिम किरणों का आध्यात्मिक प्रतीक।
+- **Sacred Emblem:** `/public/emblem.webp` — पारम्परिक कमल, दीप एवं स्वर्णिम किरणों का आध्यात्मिक प्रतीक।
 
 ---
 

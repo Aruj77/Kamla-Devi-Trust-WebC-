@@ -90,7 +90,7 @@ export const About: React.FC = () => {
             {/* Pilgrimage Image Card */}
             <div className="rounded-2xl overflow-hidden border border-amber-300 shadow-sm bg-white">
               <ImageWithFallback
-                src="/images/activities/shukratal-vatvriksh.png"
+                src="/images/activities/shukratal-vatvriksh.webp"
                 alt={lang === 'hi' ? 'अमर वटवृक्ष एवं शुक्रताल तीर्थ धाम' : 'Akshay Banyan Tree, Shukratal'}
                 aspectRatio="aspect-[16/10]"
                 categoryTag={lang === 'hi' ? 'तपोभूमि शुक्रताल' : 'Sacred Shukratal'}
