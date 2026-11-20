@@ -1,0 +1,104 @@
+import React from 'react';
+
+interface EmblemProps {
+  className?: string;
+  size?: number;
+}
+
+export const Emblem: React.FC<EmblemProps> = ({ className = 'w-10 h-10', size = 40 }) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient id="saffronGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#EA580C" />
+          <stop offset="50%" stopColor="#C2410C" />
+          <stop offset="100%" stopColor="#9A3412" />
+        </linearGradient>
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FBBF24" />
+          <stop offset="50%" stopColor="#D97706" />
+          <stop offset="100%" stopColor="#B45309" />
+        </linearGradient>
+        <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FEF08A" stopOpacity="0.8" />
+          <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      {/* Outer sacred circle */}
+      <circle cx="50" cy="50" r="46" stroke="url(#goldGradient)" strokeWidth="2.5" fill="#FFFBF5" />
+      <circle cx="50" cy="50" r="42" stroke="#EA580C" strokeWidth="1" strokeDasharray="3 3" opacity="0.6" />
+
+      {/* Sun / Radiance glow */}
+      <circle cx="50" cy="42" r="22" fill="url(#sunGlow)" />
+
+      {/* Rising Sun Rays */}
+      <path d="M50 16 L50 22 M32 24 L36 28 M68 24 L64 28 M22 40 L28 40 M78 40 L72 40" stroke="url(#goldGradient)" strokeWidth="2" strokeLinecap="round" />
+
+      {/* Diya Flame */}
+      <path
+        d="M50 26 C53 32, 57 37, 50 48 C43 37, 47 32, 50 26 Z"
+        fill="url(#goldGradient)"
+      />
+      <path
+        d="M50 31 C51.5 35, 54 38, 50 44 C46 38, 48.5 35, 50 31 Z"
+        fill="#FEF08A"
+      />
+
+      {/* Diya Base / Vessel */}
+      <path
+        d="M34 50 Q50 62 66 50 Q50 56 34 50 Z"
+        fill="url(#saffronGradient)"
+        stroke="#9A3412"
+        strokeWidth="1"
+      />
+
+      {/* Sacred Lotus Petals */}
+      {/* Central petal */}
+      <path
+        d="M50 45 C45 55 45 68 50 78 C55 68 55 55 50 45 Z"
+        fill="url(#saffronGradient)"
+        opacity="0.9"
+      />
+      {/* Left petals */}
+      <path
+        d="M50 58 C40 54 30 62 26 72 C35 74 44 70 50 66 Z"
+        fill="url(#saffronGradient)"
+        opacity="0.85"
+      />
+      <path
+        d="M50 63 C42 63 36 68 32 77 C40 78 46 74 50 70 Z"
+        fill="url(#goldGradient)"
+        opacity="0.9"
+      />
+      {/* Right petals */}
+      <path
+        d="M50 58 C60 54 70 62 74 72 C65 74 56 70 50 66 Z"
+        fill="url(#saffronGradient)"
+        opacity="0.85"
+      />
+      <path
+        d="M50 63 C58 63 64 68 68 77 C60 78 54 74 50 70 Z"
+        fill="url(#goldGradient)"
+        opacity="0.9"
+      />
+
+      {/* Lotus base base-leaves */}
+      <path
+        d="M28 78 Q50 86 72 78 Q50 81 28 78 Z"
+        fill="#15803D"
+        opacity="0.8"
+      />
+    </svg>
+  );
+};
+
+export default Emblem;
