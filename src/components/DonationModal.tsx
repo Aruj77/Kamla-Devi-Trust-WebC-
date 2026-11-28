@@ -53,7 +53,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose })
       />
 
       {/* Modal Dialog Card: Constrained max-height so it NEVER overflows */}
-      <div className="relative w-full max-w-lg max-h-[92vh] flex flex-col glass-panel-warm rounded-3xl shadow-2xl border-2 border-amber-300 overflow-hidden my-auto">
+      <div className="relative w-full max-w-xl sm:max-w-2xl max-h-[92vh] flex flex-col glass-panel-warm rounded-3xl shadow-2xl border-2 border-amber-300 overflow-hidden my-auto">
         {/* Sleek Compact Modal Header */}
         <div className="bg-gradient-to-r from-saffron-700 via-saffron-600 to-sacred-gold px-5 py-3.5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">

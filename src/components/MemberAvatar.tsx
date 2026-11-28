@@ -37,7 +37,7 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
   }, [src]);
 
   const handleError = () => {
-    // If .webp fails, try .webp (and vice-versa) before showing initial avatar
+    // If image format fails, try alternate extensions before showing initial avatar
     if (attempt === 0) {
       if (currentSrc.endsWith('.webp')) {
         setAttempt(1);
@@ -45,6 +45,16 @@ export const MemberAvatar: React.FC<MemberAvatarProps> = ({
         return;
       } else if (currentSrc.endsWith('.webp')) {
         setAttempt(1);
+        setCurrentSrc(currentSrc.replace('.webp', '.webp'));
+        return;
+      } else if (currentSrc.endsWith('.webp')) {
+        setAttempt(1);
+        setCurrentSrc(currentSrc.replace('.webp', '.webp'));
+        return;
+      }
+    } else if (attempt === 1) {
+      if (currentSrc.endsWith('.webp')) {
+        setAttempt(2);
         setCurrentSrc(currentSrc.replace('.webp', '.webp'));
         return;
       }

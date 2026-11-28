@@ -135,17 +135,34 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDonateModal }) => {
                 <span className="font-mono text-[11px]">{TRUST_DATA.contact.email}</span>
               </div>
 
-              {/* UPI Reminder Card */}
-              <div className="mt-3 p-2.5 rounded-xl bg-amber-950/70 border border-amber-800/80 text-[11px]">
-                <span className="text-amber-300 font-bold block mb-0.5 leading-none">
-                  {lang === 'hi' ? 'ट्रस्ट आधिकारिक UPI ID:' : 'Trust Official UPI ID:'}
-                </span>
-                <span className="font-mono text-white text-xs font-bold bg-black/40 px-2 py-0.5 rounded inline-block mt-1">
-                  {TRUST_DATA.donation.upiId}
-                </span>
-                <span className="block mt-1 text-[10px] text-ivory-200/70 truncate">
-                  {lang === 'hi' ? `लाभार्थी: ${TRUST_DATA.donation.payeeNameHindi}` : `Payee: ${TRUST_DATA.donation.payeeName}`}
-                </span>
+              {/* UPI & Bank Reminder Card */}
+              <div className="mt-3 p-3 rounded-2xl bg-amber-950/80 border border-amber-800/80 text-[11px] space-y-2">
+                <div>
+                  <span className="text-amber-300 font-bold block mb-0.5 leading-none">
+                    {lang === 'hi' ? 'ट्रस्ट आधिकारिक UPI ID:' : 'Trust Official UPI ID:'}
+                  </span>
+                  <span className="font-mono text-white text-xs font-bold bg-black/40 px-2 py-0.5 rounded inline-block mt-0.5">
+                    {TRUST_DATA.donation.upiId}
+                  </span>
+                  <span className="block mt-1 text-[10px] text-ivory-200/70 truncate">
+                    {lang === 'hi' ? `लाभार्थी: ${TRUST_DATA.donation.payeeNameHindi}` : `Payee: ${TRUST_DATA.donation.payeeName}`}
+                  </span>
+                </div>
+                <div className="pt-1.5 border-t border-amber-800/60 text-[10px] text-ivory-200/80 leading-relaxed space-y-0.5">
+                  <div>
+                    <strong className="text-amber-200">{lang === 'hi' ? 'खाता सं.: ' : 'A/C No: '}</strong>
+                    <span className="font-mono text-white font-semibold">{TRUST_DATA.donation.accountNumber}</span>
+                  </div>
+                  <div>
+                    <strong className="text-amber-200">IFSC: </strong>
+                    <span className="font-mono text-white font-semibold">{TRUST_DATA.donation.ifscCode}</span>
+                  </div>
+                  <div className="text-[10px] text-amber-200/90 font-medium">
+                    {lang === 'hi'
+                      ? `${TRUST_DATA.donation.bankNameHindi} (${TRUST_DATA.donation.branchHindi}) • ${TRUST_DATA.donation.accountTypeHindi}`
+                      : `${TRUST_DATA.donation.bankNameEnglish} (${TRUST_DATA.donation.branchEnglish}) • ${TRUST_DATA.donation.accountTypeEnglish}`}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

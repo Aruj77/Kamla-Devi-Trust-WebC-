@@ -60,7 +60,7 @@ export const Contact: React.FC = () => {
                 </span>
               </div>
               <h3 className="font-heading text-base sm:text-lg font-bold text-sacred-brown mb-2 leading-snug">
-                {lang === 'hi' ? 'शुक्रताल प्रधान कार्यालय' : 'Shukratal Head Office'}
+                {lang === 'hi' ? 'शुक्रताल प्रधान कार्यालय (वृद्ध आश्रम)' : 'Shukratal Head Office (Vridh Ashram)'}
               </h3>
               <p className="text-xs sm:text-sm text-sacred-brown/85 leading-relaxed">
                 {lang === 'hi' ? TRUST_DATA.address.fullHindi : TRUST_DATA.address.fullEnglish}

@@ -85,7 +85,7 @@ export const About: React.FC = () => {
 
             {/* 2 Guiding Principles Beneath in Glass Panels */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="glass-panel p-4.5 rounded-2xl flex items-start gap-3 hover:shadow-md transition-shadow">
+              <div className="glass-panel p-5 sm:p-6 rounded-2xl flex items-start gap-3 hover:shadow-md transition-shadow">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sacred-brown text-xs sm:text-sm">
@@ -99,7 +99,7 @@ export const About: React.FC = () => {
                 </div>
               </div>
 
-              <div className="glass-panel p-4.5 rounded-2xl flex items-start gap-3 hover:shadow-md transition-shadow">
+              <div className="glass-panel p-5 sm:p-6 rounded-2xl flex items-start gap-3 hover:shadow-md transition-shadow">
                 <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sacred-brown text-xs sm:text-sm">
